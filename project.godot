@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="Microtowers"
+run/main_scene="res://scenes/World.tscn"
+config/icon="res://icon.png"
+
+[layer_names]
+
+2d_render/layer_1="Player"
+2d_physics/layer_1="Player"
+2d_render/layer_2="Enemies"
+2d_physics/layer_2="Enemies"
+2d_render/layer_3="Flying"
+2d_physics/layer_3="Flying"
+
+[rendering]
+
+quality/intended_usage/framebuffer_allocation=0
+environment/default_environment="res://default_env.tres"
