@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/9-Slice/Ancient/brown.png" type="Texture" id=1]
 [ext_resource path="res://assets/9-Slice/Ancient/grey.png" type="Texture" id=2]
@@ -7,6 +7,28 @@
 [ext_resource path="res://assets/crosshairs/crosshair025.png" type="Texture" id=5]
 [ext_resource path="res://assets/crosshairs/crosshair029.png" type="Texture" id=6]
 [ext_resource path="res://assets/crosshairs/crosshair046.png" type="Texture" id=7]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile019.png" type="Texture" id=8]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile135.png" type="Texture" id=9]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile183.png" type="Texture" id=10]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile181.png" type="Texture" id=11]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile204.png" type="Texture" id=12]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile205.png" type="Texture" id=13]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile206.png" type="Texture" id=14]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile251.png" type="Texture" id=15]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile252.png" type="Texture" id=16]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile245.png" type="Texture" id=17]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile250.png" type="Texture" id=18]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile226.png" type="Texture" id=19]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile021.png" type="Texture" id=20]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile229.png" type="Texture" id=21]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile020.png" type="Texture" id=22]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile228.png" type="Texture" id=23]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile247.png" type="Texture" id=24]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile270.png" type="Texture" id=25]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile271.png" type="Texture" id=26]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile294.png" type="Texture" id=27]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile291.png" type="Texture" id=28]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile293.png" type="Texture" id=29]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -48,5 +70,149 @@ texture = ExtResource( 6 )
 
 position = Vector2( 288, 48 )
 texture = ExtResource( 7 )
+
+[node name="puddle" type="Sprite" parent="." index="7"]
+
+position = Vector2( 24, 120 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 8 )
+
+[node name="towerDefense_tile135" type="Sprite" parent="." index="8"]
+
+position = Vector2( 72, 120 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 9 )
+
+[node name="towerDefense_tile183" type="Sprite" parent="." index="9"]
+
+position = Vector2( 120, 168 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 10 )
+
+[node name="towerDefense_tile181" type="Sprite" parent="." index="10"]
+
+position = Vector2( 24, 168 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 11 )
+
+[node name="towerDefense_tile204" type="Sprite" parent="." index="11"]
+
+position = Vector2( 120, 120 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 12 )
+
+[node name="towerDefense_tile205" type="Sprite" parent="." index="12"]
+
+position = Vector2( 168, 120 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 13 )
+
+[node name="towerDefense_tile206" type="Sprite" parent="." index="13"]
+
+position = Vector2( 216, 120 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 14 )
+
+[node name="towerDefense_tile251" type="Sprite" parent="." index="14"]
+
+position = Vector2( 168, 168 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 15 )
+
+[node name="towerDefense_tile252" type="Sprite" parent="." index="15"]
+
+position = Vector2( 216, 168 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 16 )
+
+[node name="towerDefense_tile245" type="Sprite" parent="." index="16"]
+
+position = Vector2( 72, 168 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 17 )
+
+[node name="towerDefense_tile250" type="Sprite" parent="." index="17"]
+
+position = Vector2( 264, 120 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 18 )
+
+[node name="towerDefense_tile226" type="Sprite" parent="." index="18"]
+
+position = Vector2( 264, 168 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 19 )
+
+[node name="towerDefense_tile021" type="Sprite" parent="." index="19"]
+
+position = Vector2( 24, 216 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 20 )
+
+[node name="towerDefense_tile229" type="Sprite" parent="." index="20"]
+
+position = Vector2( 312, 120 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 21 )
+
+[node name="towerDefense_tile020" type="Sprite" parent="." index="21"]
+
+position = Vector2( 72, 216 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 22 )
+
+[node name="towerDefense_tile230" type="Sprite" parent="." index="22"]
+
+position = Vector2( 120, 216 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 21 )
+
+[node name="towerDefense_tile228" type="Sprite" parent="." index="23"]
+
+position = Vector2( 168, 216 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 23 )
+
+[node name="towerDefense_tile231" type="Sprite" parent="." index="24"]
+
+position = Vector2( 216, 216 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 21 )
+
+[node name="towerDefense_tile247" type="Sprite" parent="." index="25"]
+
+position = Vector2( 264, 216 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 24 )
+
+[node name="towerDefense_tile270" type="Sprite" parent="." index="26"]
+
+position = Vector2( 312, 216 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 25 )
+
+[node name="towerDefense_tile271" type="Sprite" parent="." index="27"]
+
+position = Vector2( 312, 168 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 26 )
+
+[node name="towerDefense_tile294" type="Sprite" parent="." index="28"]
+
+position = Vector2( 360, 168 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 27 )
+
+[node name="towerDefense_tile291" type="Sprite" parent="." index="29"]
+
+position = Vector2( 24, 264 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 28 )
+
+[node name="towerDefense_tile293" type="Sprite" parent="." index="30"]
+
+position = Vector2( 360, 216 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 29 )
 
 

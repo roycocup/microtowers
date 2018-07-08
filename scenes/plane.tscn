@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/Plane.gd" type="Script" id=1]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile293.png" type="Texture" id=2]
+[ext_resource path="res://assets/towerdefense/towerDefense_tile270.png" type="Texture" id=3]
+
+[node name="Plane" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+speed = 200
+rotation_speed = 1.5
+
+[node name="Shadow" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 2 )
+offset = Vector2( -10, 10 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Actual" type="Sprite" parent="." index="1"]
+
+position = Vector2( 2.38419e-07, 2.38419e-07 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 3 )
+
+
