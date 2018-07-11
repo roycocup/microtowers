@@ -3,9 +3,13 @@ extends KinematicBody2D
 export (int) var speed = 1
 export (float) var rotation_speed = 1.5
 export (PackedScene) var bullet
+
 var bullets
+var can_shoot
+
 
 func _ready():
+	can_shoot = true
 	pass
 
 func fire():
