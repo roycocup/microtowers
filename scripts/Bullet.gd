@@ -1,5 +1,6 @@
 extends KinematicBody2D
 var t
+export (int) var speed
  
 func _ready():
 	t = $Timer
@@ -16,5 +17,5 @@ func _physics_process(delta):
 	if t.is_stopped():
 		queue_free()
 	else:
-		translate(Vector2(10, 0).rotated(rotation))
+		translate(Vector2(speed, 0).rotated(rotation))
 	
