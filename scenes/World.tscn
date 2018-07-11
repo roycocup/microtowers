@@ -14,4 +14,6 @@ script = ExtResource( 1 )
 
 position = Vector2( 172.242, 226.308 )
 
+[connection signal="fire" from="Plane" to="Grounds" method="_on_Plane_fire"]
+
 

@@ -4,17 +4,15 @@ export (int) var speed = 1
 export (float) var rotation_speed = 1.5
 export (PackedScene) var bullet
 
-var bullets
-var can_shoot
-
+signal fire
 
 func _ready():
-	can_shoot = true
 	pass
 
 func fire():
-	var b = bullet.instance()
-	add_child(b)
+	print(rotation)
+	var dir = Vector2(1, 0).rotated(rotation).angle()
+	emit_signal("fire", bullet, position, rotation)
 
 func get_input(delta):
 	if Input.is_key_pressed(KEY_RIGHT):
