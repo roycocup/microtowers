@@ -10,9 +10,7 @@ func _ready():
 	pass
 
 func fire():
-	print(rotation)
-	var dir = Vector2(1, 0).rotated(rotation).angle()
-	emit_signal("fire", bullet, position, rotation)
+	emit_signal("fire", bullet, $bulletspawn.get_global_transform().get_origin(), rotation)
 
 func get_input(delta):
 	if Input.is_key_pressed(KEY_RIGHT):
