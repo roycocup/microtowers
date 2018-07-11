@@ -10,7 +10,7 @@ func _ready():
 	pass
 
 func fire():
-	emit_signal("fire", bullet, $bulletspawn.get_global_transform().get_origin(), rotation)
+	emit_signal("fire", bullet, $spawn.global_transform.origin, rotation)
 
 func get_input(delta):
 	if Input.is_key_pressed(KEY_RIGHT):
