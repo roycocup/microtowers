@@ -1,19 +1,18 @@
 extends KinematicBody2D
 
-export (int) var speed = 200
+export (int) var speed = 1
 export (float) var rotation_speed = 1.5
-var velocity = Vector2()
-var rotation_dir = 0
+export (PackedScene) var bullet
+var bullets
 
 func _ready():
 	pass
 
 func fire():
-	pass
+	var b = bullet.instance()
+	add_child(b)
 
 func get_input(delta):
-	rotation_dir = 0
-	velocity = Vector2()
 	if Input.is_key_pressed(KEY_RIGHT):
 		rotate(rotation_speed * delta)
 	if Input.is_key_pressed(KEY_LEFT):
@@ -24,4 +23,4 @@ func get_input(delta):
 
 func _physics_process(delta):
 	get_input(delta)
-	translate(Vector2(1,0).rotated(rotation))
+	translate(Vector2(speed,0).rotated(rotation))
