@@ -1,19 +1,36 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/World.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Grounds.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/plane.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Tower.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/plane.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
-[node name="Grounds" parent="." index="0" instance=ExtResource( 2 )]
+[node name="Background" type="Node2D" parent="." index="0"]
 
-[node name="Plane" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Grounds" parent="Background" index="0" instance=ExtResource( 2 )]
+
+[node name="Towers" type="Node2D" parent="Background" index="1"]
+
+[node name="Tower" parent="Background/Towers" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 97.5275, 478.275 )
+
+[node name="Tower2" parent="Background/Towers" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 801.508, 415.471 )
+
+[node name="Tower3" parent="Background/Towers" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 865.772, 94.1524 )
+
+[node name="Plane" parent="." index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 172.242, 226.308 )
 
-[connection signal="fire" from="Plane" to="Grounds" method="_on_Plane_fire"]
+[connection signal="fire" from="Plane" to="Background/Grounds" method="_on_Plane_fire"]
 
 

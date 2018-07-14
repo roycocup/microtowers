@@ -35,4 +35,8 @@ _sections_unfolded = [ "Collision" ]
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
+[connection signal="body_entered" from="Radar" to="." method="_on_Radar_body_entered"]
+
+[connection signal="body_exited" from="Radar" to="." method="_on_Radar_body_exited"]
+
 
