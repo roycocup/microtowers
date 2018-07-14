@@ -8,6 +8,7 @@ func _ready():
 
 func _process(delta):
 	if (target != null):
+		target_pos = target.position
 		look_at(target.position)
 
 
