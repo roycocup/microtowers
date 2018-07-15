@@ -5,14 +5,16 @@ export (int) var speed_multiplier = 2
 export (float) var rotation_speed = 1.5
 export (PackedScene) var bullet
 var speed
-signal fire
+# signal fire
 
 
 func _ready():
 	pass
 
 func fire():
-	emit_signal("fire", bullet, $Spawn.global_transform.origin, rotation)
+	var b = bullet.instance()
+	get_parent().add_child(b)
+	b.start($Spawn.global_transform.origin, rotation)
 	
 func get_input(delta):
 	if Input.is_key_pressed(KEY_RIGHT):
@@ -29,3 +31,4 @@ func get_input(delta):
 func _physics_process(delta):
 	get_input(delta)
 	translate(Vector2(speed,0).rotated(rotation))
+

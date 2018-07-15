@@ -12,7 +12,6 @@ func _ready():
 	cooldown = $Cooldown
 	cooldown.wait_time = cooldown_time
 	cooldown.one_shot = true
-	cooldown.stop()
 	target = null
 
 func _process(delta):
@@ -30,9 +29,10 @@ func _on_Radar_body_exited(body):
 	target = null
 	
 func fire():
-	print(cooldown.is_stopped())
 	if cooldown.is_stopped():
-		emit_signal("fire", bullet, $Spawn.global_transform.origin, rotation)
+		var b = bullet.instance()
+		get_parent().add_child(b)
+		b.start($Spawn.global_transform.origin, rotation)
 		cooldown.start()
 	
 	
