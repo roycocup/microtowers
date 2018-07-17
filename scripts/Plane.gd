@@ -4,16 +4,27 @@ export (int) var original_speed = 1
 export (int) var speed_multiplier = 2
 export (float) var rotation_speed = 1.5
 export (PackedScene) var bullet
-var speed
-# signal fire
+var speed = 0
+var bullet_pool = []
 
 
 func _ready():
+	create_bullet_pool()
 	pass
 
+func create_bullet_pool():
+	for i in range(100):
+		var b = bullet.instance()
+		get_parent().add_child(b)
+		b.hide()
+		bullet_pool.append(b)
+
 func fire():
-	var b = bullet.instance()
+	var last = bullet_pool.size()
+	var b = bullet_pool[last - 1]
 	get_parent().add_child(b)
+	b.status = b.MOVING
+	b.show()
 	b.start($Spawn.global_transform.origin, rotation)
 	
 func get_input(delta):
