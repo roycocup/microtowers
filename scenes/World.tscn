@@ -37,6 +37,4 @@ position = Vector2( 45.1749, 239.453 )
 
 [connection signal="fire" from="Background/Towers/Tower3" to="Background/Grounds" method="_on_fire"]
 
-[connection signal="fire" from="Plane" to="Background/Grounds" method="_on_fire"]
-
 
